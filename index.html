@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<title>LutaBudget — Student Budgeting &amp; Saving Tips for South Africa</title>
+<meta name="description" content="LutaBudget helps South African students budget, save money and understand personal finance with simple guides, a free budget calculator and practical tips for student life.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.lutabudget.co.za/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="LutaBudget — Student Budgeting & Saving Tips for South Africa">
+<meta property="og:description" content="Simple budgeting guides, saving tips and financial education designed around real South African student life.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1664575602276-acd073f104c1?auto=format&fit=crop&w=1200&q=60">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"LutaBudget","url":"https://www.lutabudget.co.za/","description":"Budgeting guides, saving tips and financial education for South African students."}
+</script>
+<style>
+:root{--navy:#0B1F3A;--navy2:#13284A;--bg:#FFFFFF;--soft:#F5F7FA;--line:#E2E8F0;--text:#1A2538;--muted:#5B6B82;--green:#0F9D58;--green-soft:#E6F6ED;}
+*{box-sizing:border-box;}
+html,body{overflow-x:hidden;max-width:100%;}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);}
+html{scroll-padding-top:env(safe-area-inset-top,0px);}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1726;--soft:#121D31;--line:#25344D;--text:#E7ECF5;--muted:#9FB0C7;--green-soft:#12301F;}}
+:root[data-theme="dark"]{--bg:#0E1726;--soft:#121D31;--line:#25344D;--text:#E7ECF5;--muted:#9FB0C7;--green-soft:#12301F;}
+.nav,.card,.tool-card,.guide-card{background:var(--bg);}
+.nav{top:env(safe-area-inset-top,0px);}
+body{margin:0;font-family:'Inter',sans-serif;color:var(--text);background:var(--bg);line-height:1.6;}
+a{color:inherit;text-decoration:none;cursor:pointer;}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1.75rem;}
+.page{display:none;}.page.active{display:block;}
+h1,h2,h3{font-weight:800;letter-spacing:-0.01em;margin:0 0 0.6em;}
+h2{font-size:1.9rem;}
+.lead{color:var(--muted);max-width:42ch;margin:0 0 2rem;}
+.btn{display:inline-block;padding:0.85rem 1.6rem;border-radius:8px;font-weight:700;font-size:0.95rem;}
+.btn-primary{background:var(--green);color:#fff;}
+.btn-secondary{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.4);}
+.btn-dark{background:var(--navy);color:#fff;}
+/* Nav */
+.nav{border-bottom:1px solid var(--line);padding:1rem 0;position:sticky;top:0;z-index:30;}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;}
+.brand{display:flex;align-items:center;gap:0.5rem;font-weight:800;font-size:1.15rem;color:var(--navy);}
+.navlinks{display:flex;gap:1.5rem;font-size:0.88rem;font-weight:600;color:var(--muted);flex-wrap:wrap;}
+.navlinks a:hover{color:var(--navy);}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:0.4rem;}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--navy);margin:5px 0;}
+@media(max-width:860px){
+  .nav-toggle{display:block;}
+  .navlinks{display:none;width:100%;flex-direction:column;gap:0;margin-top:1rem;}
+  .navlinks.open{display:flex;}
+  .navlinks a{padding:0.65rem 0;border-top:1px solid var(--line);}
+  .nav .wrap{flex-wrap:wrap;}
+}
+/* Hero */
+.hero{background:var(--navy);color:#fff;padding:4.5rem 0;}
+.hero .grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:2.5rem;align-items:center;}
+.hero h1{font-size:clamp(2rem,4.2vw,2.9rem);max-width:17ch;}
+.hero p.lead{color:#c3cde0;}
+.cta-row{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;}
+.section-img{width:100%;height:220px;object-fit:cover;border-radius:12px;margin-bottom:1.75rem;}
+.dash-card{background:#fff;border-radius:12px;padding:1.5rem;color:var(--text);}
+.dash-card .row{display:flex;justify-content:space-between;font-size:0.85rem;color:var(--muted);margin-bottom:0.4rem;}
+.dash-bar{height:8px;background:var(--soft);border-radius:999px;overflow:hidden;margin-bottom:1rem;}
+.dash-bar span{display:block;height:100%;background:var(--green);}
+/* Sections */
+.section{padding:4rem 0;}
+.section.soft{background:var(--soft);}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.25rem;margin-top:2rem;}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:1.5rem;}
+.card h3{font-size:1.05rem;margin-bottom:0.4rem;}
+.card p{color:var(--muted);font-size:0.9rem;margin:0;}
+.card .num{width:2.2rem;height:2.2rem;border-radius:8px;background:var(--green-soft);color:var(--green);display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:0.9rem;}
+.section-foot{margin-top:2rem;}
+/* Tools */
+.tool-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:1.75rem;}
+.tool-card h3{font-size:1.05rem;}
+.calc-row{display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:0.9rem;}
+.calc-row label{font-size:0.85rem;font-weight:700;min-width:9rem;}
+.calc-row input{flex:1;min-width:8rem;padding:0.55rem 0.75rem;border:1px solid var(--line);border-radius:6px;font-family:inherit;}
+.balance{margin-top:1rem;padding:1rem 1.25rem;border-radius:8px;font-weight:800;font-size:1.3rem;}
+.balance.pos{background:var(--green-soft);color:var(--green);}
+.balance.neg{background:#FDECEC;color:#C0392B;}
+.goal-out{margin-top:0.75rem;font-size:0.95rem;color:var(--muted);}
+.goal-out strong{color:var(--navy);}
+/* Guides */
+.guide-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;margin-top:2rem;}
+.guide-card{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;}
+.guide-card .tag{display:inline-block;background:var(--green-soft);color:var(--green);font-size:0.72rem;font-weight:800;padding:0.25rem 0.6rem;border-radius:999px;margin-bottom:0.6rem;}
+.guide-card .body{padding:1.25rem;}
+.guide-card h3{font-size:1rem;margin-bottom:0.3rem;}
+.guide-card p{color:var(--muted);font-size:0.85rem;margin:0;}
+.soon{opacity:0.55;}
+/* Article */
+.article-head{background:var(--soft);padding:3rem 0 2rem;border-bottom:1px solid var(--line);}
+.article-head .tag{color:var(--green);font-weight:800;font-size:0.8rem;text-transform:uppercase;}
+.article-head h2{font-size:clamp(1.8rem,4vw,2.4rem);margin-top:0.5rem;max-width:24ch;}
+.article-body{padding:2.25rem 0;max-width:40rem;}
+.article-body h2{font-size:1.25rem;margin-top:2rem;}
+.article-body p{margin:0 0 1.1em;color:var(--text);}
+.callout{background:var(--green-soft);border-left:3px solid var(--green);padding:1.25rem 1.5rem;margin:1.75rem 0;}
+.callout p{margin:0;}
+/* Simple pages */
+.simple h2{font-size:2rem;}
+.simple p{color:var(--muted);max-width:42rem;}
+.simple ul{color:var(--muted);max-width:42rem;}
+/* Footer */
+.footer{background:var(--navy);color:#9fb0c7;padding:3rem 0 1.5rem;}
+.footer .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:2rem;padding-bottom:2rem;border-bottom:1px solid #223450;}
+.footer .brand{color:#fff;}
+.footer p.desc{max-width:26ch;font-size:0.88rem;margin-top:0.5rem;}
+.footer .cols{display:flex;gap:2.5rem;flex-wrap:wrap;}
+.footer .col h4{color:#fff;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.04em;margin:0 0 0.75rem;}
+.footer .col a{display:block;color:#9fb0c7;font-size:0.88rem;margin-bottom:0.5rem;}
+.footer .col a:hover{color:#fff;}
+.footer .bottom{padding-top:1.25rem;font-size:0.8rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;}
+@media(max-width:800px){
+  .hero .grid{grid-template-columns:1fr;}
+  .hero{padding:3rem 0;}
+  h2{font-size:1.5rem;}
+  .calc-row label{min-width:100%;}
+  .footer .top{flex-direction:column;}
+  .section-img{height:160px;}
+}
+@media(max-width:480px){
+  .wrap{padding:0 1.1rem;}
+  .cta-row{flex-direction:column;align-items:stretch;}
+  .cta-row .btn{text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <div class="wrap">
+    <a class="brand" data-nav="home">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="12" width="4" height="9" fill="#0B1F3A"/><rect x="10" y="7" width="4" height="14" fill="#0B1F3A"/><rect x="17" y="3" width="4" height="18" fill="#0F9D58"/></svg>
+      LutaBudget
+    </a>
+    <button class="nav-toggle" onclick="document.getElementById('navlinks').classList.toggle('open')" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <div class="navlinks" id="navlinks">
+      <a onclick="goHome('home')">Home</a>
+      <a onclick="goHome('budgeting')">Budgeting</a>
+      <a onclick="goHome('saving')">Saving Money</a>
+      <a onclick="goHome('education')">Financial Education</a>
+      <a onclick="goHome('student')">Student Money</a>
+      <a onclick="goHome('tools')">Tools &amp; Resources</a>
+      <a data-nav="about">About</a>
+    </div>
+  </div>
+</div>
+
+<!-- HOME -->
+<div class="page active" id="page-home">
+
+  <section class="hero">
+    <div class="wrap grid">
+      <div>
+        <h1>Helping South African Students Take Control of Their Money</h1>
+        <p class="lead">Simple budgeting guides, saving tips and financial education designed around real student life.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" onclick="goHome('tools')">Start Budgeting</a>
+          <a class="btn btn-secondary" onclick="goHome('guides')">Explore Money Guides</a>
+        </div>
+      </div>
+      <div>
+        <svg class="section-img" role="img" aria-label="A student working through a monthly budget on a laptop" viewBox="0 0 600 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="600" height="160" fill="#E6F6ED"/><rect x="230" y="40" width="140" height="82" rx="8" fill="#0B1F3A"/><rect x="240" y="50" width="120" height="62" rx="4" fill="#E6F6ED"/><rect x="215" y="122" width="170" height="10" rx="5" fill="#0B1F3A"/><rect x="255" y="95" width="14" height="12" fill="#0F9D58"/><rect x="278" y="82" width="14" height="25" fill="#0F9D58"/><rect x="301" y="68" width="14" height="39" fill="#0F9D58"/></svg>
+      <div class="dash-card">
+        <div class="row"><span>Monthly budget</span><span>R1,710</span></div>
+        <div class="dash-bar"><span style="width:50%;background:#0B1F3A;"></span></div>
+        <div class="row"><span>Needs</span><span>R855</span></div>
+        <div class="dash-bar"><span style="width:30%;"></span></div>
+        <div class="row"><span>Wants</span><span>R513</span></div>
+        <div class="dash-bar"><span style="width:20%;background:#7CC9A5;"></span></div>
+        <div class="row"><span>Savings</span><span>R342</span></div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="why">
+    <div class="wrap">
+      <h2>Money doesn't have to be complicated.</h2>
+      <p class="lead">Student life already comes with enough pressure. LutaBudget makes budgeting and financial education easier to understand — no jargon, no judgment.</p>
+      <div class="cards">
+        <div class="card"><div class="num">1</div><h3>Budget Better</h3><p>Learn how to plan your income and expenses.</p></div>
+        <div class="card"><div class="num">2</div><h3>Save Smarter</h3><p>Discover practical ways to make your money go further.</p></div>
+        <div class="card"><div class="num">3</div><h3>Understand Money</h3><p>Learn financial concepts in simple language.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft" id="budgeting">
+    <div class="wrap">
+      <h2>Student Budgeting</h2>
+      <p class="lead">The fundamentals of building a budget that actually survives the month.</p>
+      <div class="cards">
+        <a class="card" data-nav="post-save"><h3>How to Create a Student Budget</h3><p>Start with a simple, realistic plan for your income.</p></a>
+        <div class="card"><h3>How to Track Your Expenses</h3><p>A simple system for seeing where your money goes.</p></div>
+        <div class="card"><h3>Needs vs Wants</h3><p>How to tell the difference when money is tight.</p></div>
+        <div class="card"><h3>Managing Your Allowance</h3><p>Making a lump sum last the whole period.</p></div>
+      </div>
+      <div class="section-foot"><a class="btn btn-dark" onclick="goHome('guides')">Explore Budgeting</a></div>
+    </div>
+  </section>
+
+  <section class="section" id="saving">
+    <div class="wrap">
+      <svg class="section-img" role="img" aria-label="A savings jar labelled with money set aside for future goals" viewBox="0 0 600 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="600" height="160" fill="#E6F6ED"/><rect x="250" y="40" width="100" height="95" rx="14" fill="#fff" stroke="#0B1F3A" stroke-width="4"/><rect x="262" y="26" width="76" height="16" rx="5" fill="#0B1F3A"/><circle cx="300" cy="105" r="18" fill="#0F9D58"/><text x="300" y="112" text-anchor="middle" font-size="20" font-weight="800" fill="#fff" font-family="Inter,sans-serif">R</text></svg>
+      <h2>Save Money</h2>
+      <p class="lead">Small, practical changes that add up over a semester.</p>
+      <div class="cards">
+        <div class="card"><h3>Saving on Food</h3><p>Batch cooking and smarter grocery habits.</p></div>
+        <div class="card"><h3>Saving on Transport</h3><p>Cutting your biggest recurring cost.</p></div>
+        <div class="card"><h3>Reducing Unnecessary Spending</h3><p>Finding the leaks in your monthly budget.</p></div>
+        <div class="card"><h3>Student Discounts</h3><p>Getting more for the money you do spend.</p></div>
+      </div>
+      <div class="section-foot"><a class="btn btn-dark" onclick="goHome('guides')">Learn How to Save</a></div>
+    </div>
+  </section>
+
+  <section class="section soft" id="education">
+    <div class="wrap">
+      <h2>Financial Education</h2>
+      <p class="lead">Complicated financial concepts, explained simply.</p>
+      <div class="cards">
+        <div class="card"><h3>Saving vs Investing</h3><p>What separates the two, and when each matters.</p></div>
+        <div class="card"><h3>Interest, Explained</h3><p>Why interest works for or against you.</p></div>
+        <div class="card"><h3>Compound Interest</h3><p>The single most useful concept in personal finance.</p></div>
+        <div class="card"><h3>Credit Basics</h3><p>What credit actually means before you use it.</p></div>
+        <div class="card"><h3>Credit Scores</h3><p>What they are and why they'll matter later.</p></div>
+      </div>
+      <div class="section-foot"><a class="btn btn-dark" onclick="goHome('guides')">Learn the Basics</a></div>
+    </div>
+  </section>
+
+  <section class="section" id="student">
+    <div class="wrap">
+      <svg class="section-img" role="img" aria-label="Coins stacked on a table, representing a student stretching a small monthly allowance" viewBox="0 0 600 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="600" height="160" fill="#E6F6ED"/><ellipse cx="300" cy="120" rx="55" ry="14" fill="#0B1F3A"/><ellipse cx="300" cy="100" rx="55" ry="14" fill="#0F9D58"/><ellipse cx="300" cy="80" rx="55" ry="14" fill="#0B1F3A"/><ellipse cx="300" cy="60" rx="55" ry="14" fill="#0F9D58"/></svg>
+      <h2>Student Money in South Africa</h2>
+      <p class="lead">Budgeting topics specific to South African student life. For anything related to NSFAS or current financial aid policy, always check the official NSFAS website for the latest information.</p>
+      <div class="cards">
+        <div class="card"><h3>Student Allowances</h3><p>Making a monthly or termly allowance stretch.</p></div>
+        <div class="card"><h3>NSFAS &amp; Financial Aid</h3><p>General budgeting principles for aid-funded students.</p></div>
+        <div class="card"><h3>Accommodation Costs</h3><p>Budgeting around res, digs, or renting.</p></div>
+        <div class="card"><h3>Food Budgets</h3><p>Eating well without overspending.</p></div>
+        <div class="card"><h3>Transport Costs</h3><p>Taxis, buses, and campus commuting.</p></div>
+        <div class="card"><h3>Textbooks &amp; Part-Time Income</h3><p>Cutting costs and adding income where you can.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft" id="tools">
+    <div class="wrap">
+      <svg class="section-img" role="img" aria-label="A calculator next to a laptop, used for working out a monthly student budget" viewBox="0 0 600 160" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="600" height="160" fill="#E6F6ED"/><rect x="255" y="22" width="90" height="118" rx="12" fill="#0B1F3A"/><rect x="267" y="34" width="66" height="26" rx="5" fill="#E6F6ED"/><g fill="#0F9D58"><rect x="267" y="72" width="18" height="14" rx="3"/><rect x="291" y="72" width="18" height="14" rx="3"/><rect x="315" y="72" width="18" height="14" rx="3"/><rect x="267" y="94" width="18" height="14" rx="3"/><rect x="291" y="94" width="18" height="14" rx="3"/><rect x="315" y="94" width="18" height="14" rx="3"/></g></svg>
+      <h2>Tools &amp; Resources</h2>
+      <p class="lead">Practical tools you can actually use, not just read about.</p>
+      <div class="cards">
+        <div class="tool-card">
+          <h3>Student Budget Calculator</h3>
+          <div class="calc-row"><label>Monthly income (R)</label><input type="number" id="inc" value="1710" oninput="calcBudget()"></div>
+          <div class="calc-row"><label>Accommodation</label><input type="number" id="e1" value="0" oninput="calcBudget()"></div>
+          <div class="calc-row"><label>Food &amp; groceries</label><input type="number" id="e2" value="500" oninput="calcBudget()"></div>
+          <div class="calc-row"><label>Transport</label><input type="number" id="e3" value="300" oninput="calcBudget()"></div>
+          <div class="calc-row"><label>Other expenses</label><input type="number" id="e4" value="200" oninput="calcBudget()"></div>
+          <div class="balance pos" id="balanceOut">Remaining: R710</div>
+        </div>
+        <div class="tool-card">
+          <h3>Savings Calculator</h3>
+          <div class="calc-row"><label>Savings goal (R)</label><input type="number" id="goal" value="2000" oninput="calcSave()"></div>
+          <div class="calc-row"><label>Monthly contribution</label><input type="number" id="contrib" value="200" oninput="calcSave()"></div>
+          <div class="goal-out" id="saveOut">At R200/month, you'll reach R2,000 in <strong>10 months</strong>.</div>
+        </div>
+        <div class="card"><h3>Monthly Budget Template</h3><p>A printable template — coming soon.</p></div>
+        <div class="card"><h3>Expense Tracker</h3><p>A simple monthly spending log — coming soon.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="guides">
+    <div class="wrap">
+      <h2>Latest Guides</h2>
+      <p class="lead">Start with these — more guides are added regularly.</p>
+      <div class="guide-row">
+        <a class="guide-card" data-nav="post-save"><div class="body"><span class="tag">Budgeting</span><h3>How to Save Money as a Student on a Tight Budget</h3><p>Everyday habits that actually move the needle.</p></div></a>
+        <a class="guide-card" data-nav="post-rule"><div class="body"><span class="tag">Budgeting</span><h3>The 50/30/20 Rule for Students, Explained</h3><p>A simple way to split irregular income.</p></div></a>
+        <div class="guide-card soon"><div class="body"><span class="tag">Coming soon</span><h3>How to Manage Your Allowance as a Student</h3><p>Making a lump sum last the whole period.</p></div></div>
+        <div class="guide-card soon"><div class="body"><span class="tag">Coming soon</span><h3>Needs vs Wants: A Student's Guide</h3><p>Telling the difference when money is tight.</p></div></div>
+        <div class="guide-card soon"><div class="body"><span class="tag">Coming soon</span><h3>How to Save Money on Food as a Student</h3><p>Batch cooking and smarter groceries.</p></div></div>
+        <div class="guide-card soon"><div class="body"><span class="tag">Coming soon</span><h3>What Is Compound Interest?</h3><p>The single most useful concept in personal finance.</p></div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ABOUT -->
+<div class="page" id="page-about">
+  <section class="section simple"><div class="wrap">
+    <h2>About LutaBudget</h2>
+    <p>LutaBudget started out of necessity — a way of keeping track of money that never seemed to stretch quite as far as it needed to. That habit grew into a resource for other South African students figuring out the same thing: how to budget, save, and understand money without a financial background to lean on.</p>
+    <p>LutaBudget isn't a bank, and it doesn't offer financial products. It's a plain-language guide to budgeting and saving, written for real student life.</p>
+  </div></section>
+</div>
+
+<!-- CONTACT -->
+<div class="page" id="page-contact">
+  <section class="section simple"><div class="wrap">
+    <h2>Contact</h2>
+    <p>Questions, topic suggestions, or feedback — reach out at hello@lutabudget.co.za (placeholder address for this demo).</p>
+  </div></section>
+</div>
+
+<!-- PRIVACY -->
+<div class="page" id="page-privacy">
+  <section class="section simple"><div class="wrap">
+    <h2>Privacy Policy</h2>
+    <p>This is placeholder privacy policy content for the LutaBudget demo site. A real privacy policy should describe exactly what data is collected (e.g. newsletter emails, contact form submissions, analytics), how it's stored, and how users can request it be deleted, in line with South Africa's POPIA requirements.</p>
+  </div></section>
+</div>
+
+<!-- DISCLAIMER -->
+<div class="page" id="page-disclaimer">
+  <section class="section simple"><div class="wrap">
+    <h2>Disclaimer</h2>
+    <p>LutaBudget provides general financial education content for informational purposes only. Nothing on this site is financial, legal, tax, or investment advice, and LutaBudget is not a registered financial advisor or financial services provider.</p>
+    <p>Budgeting figures, tools, and calculators on this site (including the budget and savings calculators) are for illustration and planning purposes only. They do not account for every individual's full financial situation and should not be relied on as the sole basis for a financial decision.</p>
+    <p>For anything related to NSFAS, bursaries, or other financial aid, always confirm current details directly with the official NSFAS website or your institution's financial aid office — policies and amounts can change and are not controlled by LutaBudget.</p>
+    <p>If you need advice specific to your situation, consider speaking to a qualified, registered financial advisor.</p>
+  </div></section>
+</div>
+
+<!-- POST: SAVE -->
+<div class="page" id="page-post-save">
+  <div class="article-head"><div class="wrap"><span class="tag">Budgeting</span><h2>How to Save Money as a Student on a Tight Budget</h2></div></div>
+  <div class="article-body wrap">
+    <p>When your income is small and irregular, "just save 20%" can feel like advice from a different planet.</p>
+    <h2>1. Know your real number</h2><p>Track two weeks of spending before deciding on a plan.</p>
+    <h2>2. Give every rand a job</h2><p>Split income the moment it lands, savings first.</p>
+    <h2>3. Automate the saving</h2><p>A standing order into a separate account beats daily willpower.</p>
+    <div class="callout"><p>Try the budget calculator on the <a onclick="showPage('home');setTimeout(function(){goHome('tools')},0)" style="text-decoration:underline;">Tools &amp; Resources</a> section.</p></div>
+  </div>
+</div>
+
+<!-- POST: RULE -->
+<div class="page" id="page-post-rule">
+  <div class="article-head"><div class="wrap"><span class="tag">Budgeting</span><h2>The 50/30/20 Rule for Students, Explained</h2></div></div>
+  <div class="article-body wrap">
+    <p>Split income into 50% needs, 30% wants, and 20% savings. For many students needs take up more — a split closer to 65/15/20 is common, and that's fine.</p>
+    <h2>Applying it to irregular income</h2><p>If money arrives as one lump sum, divide each bucket by the number of weeks it needs to last.</p>
+    <div class="callout"><p>See this applied to a real NSFAS allowance example in the <a onclick="showPage('home');setTimeout(function(){goHome('tools')},0)" style="text-decoration:underline;">budget calculator</a>.</p></div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <div class="brand">LutaBudget</div>
+        <p class="desc">Helping South African students build better money habits.</p>
+      </div>
+      <div class="cols">
+        <div class="col"><h4>Explore</h4><a onclick="goHome('budgeting')">Budgeting</a><a onclick="goHome('saving')">Saving Money</a><a onclick="goHome('education')">Financial Education</a><a onclick="goHome('student')">Student Money</a></div>
+        <div class="col"><h4>Site</h4><a data-nav="about">About</a><a data-nav="contact">Contact</a><a data-nav="privacy">Privacy Policy</a><a data-nav="disclaimer">Disclaimer</a></div>
+        <div class="col"><h4>Follow</h4><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">X</a></div>
+      </div>
+    </div>
+    <div class="bottom"><span>&copy; 2026 LutaBudget.</span><span>Helping students take control of their money.</span></div>
+  </div>
+</div>
+
+<script>
+function showPage(id){
+  document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active');});
+  var el=document.getElementById('page-'+id); if(el) el.classList.add('active');
+  window.scrollTo(0,0);
+}
+document.addEventListener('click',function(e){
+  var el=e.target.closest('[data-nav]');
+  if(el){e.preventDefault();showPage(el.getAttribute('data-nav'));}
+});
+function goHome(anchor){
+  showPage('home');
+  setTimeout(function(){
+    if(anchor==='home'){window.scrollTo({top:0,behavior:'smooth'});return;}
+    var t=document.getElementById(anchor);
+    if(t) t.scrollIntoView({behavior:'smooth'});
+  },0);
+}
+function calcBudget(){
+  var inc=+document.getElementById('inc').value||0;
+  var exp=['e1','e2','e3','e4'].reduce(function(s,id){return s+(+document.getElementById(id).value||0);},0);
+  var bal=inc-exp;
+  var out=document.getElementById('balanceOut');
+  out.textContent='Remaining: R'+bal.toLocaleString();
+  out.className='balance '+(bal>=0?'pos':'neg');
+}
+function calcSave(){
+  var goal=+document.getElementById('goal').value||0;
+  var c=+document.getElementById('contrib').value||0;
+  var out=document.getElementById('saveOut');
+  if(c<=0){out.innerHTML='Enter a monthly contribution above R0.';return;}
+  var months=Math.ceil(goal/c);
+  out.innerHTML='At R'+c+'/month, you\'ll reach R'+goal.toLocaleString()+' in <strong>'+months+' month'+(months===1?'':'s')+'</strong>.';
+}
+calcBudget(); calcSave();
+</script>
+</body>
+</html>
